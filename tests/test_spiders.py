@@ -34,7 +34,7 @@ def get_crawler(**kwargs):
 
 class TestRedisMixin_setup_redis(object):
 
-    def setup(self):
+    def setup_method(self):
         self.myspider = MySpider()
 
     def test_crawler_required(self):

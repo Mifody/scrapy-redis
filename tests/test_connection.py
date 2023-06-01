@@ -32,7 +32,7 @@ class TestGetRedis(object):
 
 class TestFromSettings(object):
 
-    def setup(self):
+    def setup_method(self):
         self.redis_cls = mock.Mock()
         self.expected_params = {
             'timeout': 0,

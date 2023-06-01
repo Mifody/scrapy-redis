@@ -2,11 +2,14 @@ import logging
 import time
 
 from scrapy.dupefilters import BaseDupeFilter
-from scrapy.utils.request import request_fingerprint
+
+try:
+    from scrapy.utils.request import fingerprint as request_fingerprint
+except:
+    from scrapy.utils.request import request_fingerprint
 
 from . import defaults
 from .connection import get_redis_from_settings
-
 
 logger = logging.getLogger(__name__)
 
